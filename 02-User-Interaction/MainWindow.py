@@ -6,6 +6,8 @@ The program shows how to have a status bar and a program menu with some menu ite
 It also shows a very simple example of how you can use a QGraphicsScene to draw
 custom 2D graphics.
 
+It also shows an example of getting keypress events and dealing with them.
+
 All about QMainWindow https://doc.qt.io/qt-5/qmainwindow.html#details
 QMainWindow lets you create fully composed windowed applications. With more
 features than a standard windowed QWidget.
@@ -18,6 +20,7 @@ QAction: http://doc.qt.io/qt-5/qaction.html#details
 
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import QIcon, QPen, QBrush, QColor
+from PyQt5.QtCore import Qt
 import sys
 from random import randint
 
@@ -79,6 +82,15 @@ class MyApp(QMainWindow):
 
     def newMenuClicked(self):
         print "Hello New!"
+
+    def keyPressEvent(self, event):
+        print "Hello Key", event
+        key = event.key()
+        if key == Qt.Key_S:
+            self.drawSquare()
+        elif key == Qt.Key_C:
+            self.drawCircle()
+
 
 
 if __name__ == '__main__':

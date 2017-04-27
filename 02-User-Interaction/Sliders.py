@@ -19,7 +19,8 @@ class Sliders(QWidget):
     def initGUI(self):
         slider1 = QSlider(self)
         slider2 = QSlider(self)
-        slider1.setOrientation(Qt.Horizontal)
+        #slider1.setOrientation(Qt.Horizontal)
+        slider1.setOrientation(Qt.Vertical)
         slider2.setOrientation(Qt.Horizontal)
         progress1 = QProgressBar(self)
         progress2 = QProgressBar(self)
@@ -39,7 +40,7 @@ class Sliders(QWidget):
         slider2.valueChanged.connect(label2.setNum)
 
         # Size and position everything
-        slider1.setGeometry(20, 20, 400, 80)
+        #slider1.setGeometry(20, 20, 400, 80)
         progress1.setGeometry(20, 100, 400, 20)
         label1.setGeometry(480, 40, 60, 60)
         slider2.setGeometry(20, 200, 400, 80)
