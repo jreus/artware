@@ -1,0 +1,58 @@
+QWidget#parent {
+  background-color: #dd6cbd;
+}
+
+QGroupBox {
+  font: 16px;
+  font-family: "Times New Roman", Times, serif;
+  font-style: italic;
+}
+
+QGroupBox#formbox {
+  background-color: rgb(34, 215, 215);
+}
+
+QGroupBox#buttonbox {
+  background-color: rgb(215, 165, 34);
+}
+
+QComboBox {
+  padding: 30px;
+  font-size: 20px;
+}
+
+QLineEdit {
+  border-radius: 15px;
+  border-style: outset;
+  border-width: 3px;
+  border-color: blue;
+  font-size: 16px;
+  font-family: "Monaco", monospace, sans-serif;
+  font-style: italic;
+  padding: 20px;
+  background-color: black;
+  color: white;
+}
+
+QSpinBox {
+  font-style: bold;
+}
+
+QPushButton {
+  background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+    stop: 0 #f6f7fa, stop: 1 #dadbde);
+  border-radius: 15px;
+  border-style: outset;
+  border-width: 3px;
+  border-color: grey;
+  font: 15px;
+  font-family: "Monaco", monospace, sans-serif;
+  min-width: 100px;
+  padding: 6px;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #dadbde, stop: 1 #f6f7fa);
+    border-style: inset;
+}

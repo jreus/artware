@@ -1,0 +1,15 @@
+QWidget#parent {
+  background-image: url('window02.jpg');
+}
+
+QPushButton#button1 {
+  background-image: url('button01.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+QPushButton#button1:pressed {
+  background-image: url('button02.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+}
