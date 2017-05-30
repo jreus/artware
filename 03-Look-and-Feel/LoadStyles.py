@@ -33,7 +33,7 @@ class MyWin(QMainWindow):
         centerWidget.setObjectName("parent")
         centerWidget.setLayout(mainLayout)
         self.setCentralWidget(centerWidget)
-        self.setWindowTitle("Style Show")
+        self.setWindowTitle("Load Styles from a .css File")
 
         b1 = QPushButton("Button1")
         b1.setObjectName("button1")
@@ -79,7 +79,7 @@ class MyWin(QMainWindow):
         if(newStyle == "System Default"):
             qApp.setStyleSheet("")# remove all stylesheets
         else:
-            fp = open(newStyle)
+            fp = open("css/" + newStyle)
             qApp.setStyleSheet(fp.read()) # set global stylesheet of qApp
             fp.close()
 

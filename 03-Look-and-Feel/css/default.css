@@ -1,0 +1,267 @@
+/* The QWidget named "main" gets a linear gradient as a background
+from (0,0) - upper left, to (1,1) - bottom right. There are three stops in the
+gradient at 0, 0.7 and 1 along the scale from 0 to 1. */
+QWidget#main {
+	background-color: qlineargradient(x1: 0 ,y1: 0 ,x2: 1 ,y2: 1,
+						stop: 0 #fff2d1, stop: 0.7 #ff4477
+						stop: 1 #ffffdd);
+}
+
+QCheckBox {
+	font-weight: bold;
+	font-style: italic;
+}
+
+QCheckBox::indicator {
+	width: 25px;
+	height: 25px;
+}
+
+QCheckBox::indicator:unchecked {
+	image: url(images/thumbup-blk.png);
+}
+
+QCheckBox::indicator:unchecked:hover {
+	image: url(images/emoji-fingercrossed.png);
+}
+
+QCheckBox::indicator:checked {
+	image: url(images/thumbup.png);
+}
+
+QRadioButton::indicator:unchecked {
+	image: url(images/emoji-sad.png);
+}
+
+QRadioButton::indicator:unchecked:hover {
+	image: url(images/emoji-nervous-happy.png);
+}
+
+QRadioButton::indicator:checked {
+	image: url(images/emoji-inlove.png);
+}
+
+QComboBox {
+	border: 2px solid gray;
+	height: 30px;
+	max-width: 200;
+	border-radius: 8px;
+	padding: 5px 18px 5px 3px;
+}
+
+/* QComboBox gets the "on" state when the popup is open */
+QComboBox:on {
+	background: grey;
+}
+
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 30px;
+
+    border-left-width: 5px;
+    border-left-color: darkgray;
+    border-left-style: solid; /* just a single line */
+		border-bottom-left-radius: 0px;
+		border-top-left-radius: 0px;
+		border-bottom-right-radius: 8px;
+		border-top-right-radius: 8px;
+
+		background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                   stop: 0 #FFFFFF, stop: 0.7 #AAAAAA,
+                   stop: 0.9 #DDDDDD, stop: 1.0 #FFFFFF);
+}
+
+QComboBox::down-arrow {
+    image: url(images/heart.png);
+}
+
+QComboBox::down-arrow:on {
+    image: url(images/blackheart.png);
+}
+
+/* The pop-up of the QComboBox is styled using the heirarchical selector like so */
+QComboBox QAbstractItemView {
+    border: 5px solid white;
+		background-color: grey;
+		color: white;
+}
+
+QGroupBox {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                          stop: 0 #E0E0E0,
+														stop: 1 #FFFFFF);
+    border: 2px solid gray;
+    border-radius: 15px;
+    margin-top: 12px; /* leave space at the top for the title */
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;      /* where in the box model to put the title of the group box */
+    subcontrol-position: top center; /* position at the top center */
+    padding: 3px;
+		border-radius: 10px;
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 1, y2: 1,
+                        stop: 0 #FFAAAA,
+													stop: 0.3 #FFFFFF,
+													stop: 1 #AAEEFF
+		);
+}
+
+QProgressBar {
+	border: 4px solid grey;
+	border-radius: 10px;
+	text-align: center;
+	font-weight: bold;
+}
+
+QProgressBar::chunk {
+	background-color: #CD96CD;
+	width: 10px;
+	margin: 0.5px;
+	border-radius: 2px;
+}
+
+QSlider {
+	height: 60px;
+}
+
+QSlider::groove:horizontal {
+    border: 1px solid #999999;
+    height: 10px;
+
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+									stop:0 #818181, stop:1 #d4d4d4);
+		margin: 0 8px; /* set a small left-right margin */
+}
+
+QSlider::handle:horizontal {
+		image: url(images/muscle.png);
+		background-color: transparent;
+    width: 40px;
+    margin: -20px 0; /* handle is placed by default on the contents rect of the groove. This expands outside the groove in the up-down direction */
+    top: -18px; /* absolutely position the handle so the muscle rides the groove */
+}
+
+QSpinBox {
+		font-size: 48px;
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+											stop: 0 #A1A1A1, stop: 0.7 #828282, stop: 1 #FFFFFF);
+    border: 2px solid #3192f2;
+		border-radius: 5px;
+		height: 30px;
+}
+
+QSpinBox::up-button {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 20px;
+    border-image: url(images/thumbup.png) 1;
+		margin: 2px;
+}
+
+QSpinBox::up-button:pressed {
+    border-image: url(images/thumbup-blk.png) 1;
+}
+
+QSpinBox::down-button {
+    subcontrol-origin: padding;
+    subcontrol-position: bottom right;
+    width: 20px;
+    border-image: url(images/thumbdown.png) 1;
+		margin: 2px;
+}
+
+QSpinBox::down-button:pressed {
+    border-image: url(images/thumbdown-blk.png) 1;
+}
+
+QLineEdit {
+    border: 2px solid gray;
+    border-radius: 10px;
+    padding: 0 8px; /* set the padding for top/bottom left/right */
+    background: yellow;
+    selection-background-color: darkgray;
+}
+
+QPushButton {
+    border: 2px solid #8f8f91;
+    border-radius: 15px;
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                     stop: 0 #f6f7fa,
+																				stop: 1 #eeddde);
+		max-width: 120px;
+		min-height: 30px;
+		min-width: 100px;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #ff66de, stop: 1 #f6f7fa);
+}
+
+QDialog {
+	background-image: url(images/muscle.png);
+	font-weight: normal;
+	font-size: 15px;
+	font-family: "Arial";
+}
+
+QScrollBar:vertical {
+     border: 2px solid white;
+     background: #32CC99;
+     width: 40px;
+     margin: 60px 0 0 0;
+ }
+
+ QScrollBar::handle:vertical {
+     background: white;
+     min-height: 10px;
+		 border: 2px solid black;
+ }
+
+ QScrollBar::add-line:vertical {
+     border: 2px solid blue;
+     background: #AA44FF;
+     height: 25px;
+		 top: 31px;
+     subcontrol-position: top;
+     subcontrol-origin: margin;
+ }
+
+ QScrollBar::sub-line:vertical {
+     border: 2px solid black;
+     background: #FFCCEE;
+     height: 25px;
+     subcontrol-position: top;
+     subcontrol-origin: margin;
+ }
+ QScrollBar::up-arrow:vertical {
+     width: 25px;
+     height: 25px;
+     image: url(images/hand-up.png);
+ }
+
+QScrollBar::down-arrow:vertical
+{
+     width: 25px;
+     height: 25px;
+     image: url(images/hand-down.png);
+ }
+
+ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+     background: none;
+ }
+
+QListView {
+	max-width: 200px;
+}
+
+QPlainTextEdit, QListView {
+	font-family: "Monaco", "Andale Mono", monospace;
+	font-size: 18px;
+	color: white;
+	font-weight: bold;
+    background-image: url(images/bg-winxp.jpg);
+    background-attachment: scroll;
+}
